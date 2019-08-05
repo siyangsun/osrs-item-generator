@@ -10,3 +10,12 @@ def get_itemlist():
             names.append(item['name'])
     json_file.close()
     return(names)
+
+def split_names(names):
+    processed_names = []
+    for name in names:
+        processed_names.append(name.split(' '))
+    return(processed_names)
+
+items = get_itemlist()
+print(split_names(items))
